@@ -1,11 +1,11 @@
 {
-    "id": 57436521,
-    "name": "SampleLevel1",
-    "author": "LevelUploader",
+    "id": 1337,
+    "name": "Challenge1",
+    "author": "zand1ks",
     "creators": ["Creator1", "Creator2", "Creator3"],
-    "verifier": "Verifier",
-    "verification": "https://www.youtube.com/watch?v=ISTl28wKSXc",
-    "percentToQualify": 56,
+    "verifier": "zand1ks",
+    "verification": "https://www.youtube.com",
+    "percentToQualify": 100,
     "password": "Not Copyable",
     "records": [
         {
