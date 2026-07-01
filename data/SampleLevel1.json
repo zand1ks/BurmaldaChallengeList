@@ -2,10 +2,11 @@
     "id": 1337,
     "name": "Challenge1",
     "author": "zand1ks",
-    "creators": ["zand1ks"],
+    "creators": [],
     "verifier": "zand1ks",
     "verification": "https://www.youtube.com",
-    "percentToQualify": 100,
-    "password": "Not Copyable",
-    "records": [    ]
+    "percentToQualify": "100",
+    "password": "Free To Copy",
+    "records": [
+    ]
 }
