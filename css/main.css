@@ -95,25 +95,23 @@ input[type="checkbox"] {
     margin: 0;
 }
 
-header a[href="#/submit"],
-header .submit-record,
-header button:has(span) {
+/* --- НАШ КОД ДЛЯ СКРЫТИЯ ЭЛЕМЕНТОВ ВСТАВЛЯЕТСЯ СЮДА --- */
+
+/* 1. Скрываем белую кнопку Submit Record в правом углу шапки */
+header > a, 
+header > button {
     display: none !important;
 }
 
-main p:has(a[href*="TheShittyList"]),
-main div:has(> a[href*="TheShittyList"]) {
+/* 2. Скрываем текст "Website layout made by..." и список эдиторов */
+main > div:nth-child(3) > p:first-child,
+main > div:nth-child(3) > h2:first-of-type,
+main > div:nth-child(3) > ul {
     display: none !important;
 }
 
-.submission-requirements,
-main div > h2:contains("Submission Requirements"),
-main div > h2:contains("Submission Requirements") + p,
-main div > h2:contains("Submission Requirements") ~ p {
-    display: none !important;
-}
-
-main p:has(text:contains("Achieved the record")),
-main p:has(text:contains("Do not use secret routes")) {
+/* 3. Скрываем заголовок "Submission Requirements" и все правила под ним */
+main > div:nth-child(3) > h2:nth-of-type(2),
+main > div:nth-child(3) > p {
     display: none !important;
 }
