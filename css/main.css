@@ -97,19 +97,25 @@ input[type="checkbox"] {
 
 /* --- НАШ КОД ДЛЯ СКРЫТИЯ ЭЛЕМЕНТОВ ВСТАВЛЯЕТСЯ СЮДА --- */
 
-/* 1. Скрываем белую кнопку Submit Record в правом углу шапки */
-header > a,
-header > button {
+/* 1. Полностью вырезаем кнопку Submit Record по её тексту/тегу в шапке */
+header a[href*="submit"], 
+header button, 
+.nav + a {
     display: none !important;
 }
 
-/* 2. Корректируем сетку сайта, убирая третью колонку */
+/* 2. Пересобираем сетку: делаем её из двух колонок, а не трёх */
 main {
-    grid-template-columns: 1fr 2fr !important; /* Настройте пропорции под себя */
+    grid-template-columns: 1fr 3fr !important; /* Левая колонка уже, правая с видео — шире */
 }
 
-/* 3. Полностью скрываем третью колонку (правила, создателей и т.д.) */
-main > div:nth-child(3) {
+/* 3. Заставляем центральный блок с видео занимать всё оставшееся пространство, если пустой блок остался */
+main > div:nth-child(2) {
+    grid-column: span 2 !important;
+}
+
+/* 4. Скрываем нафиг третий блок, что бы там ни было (правила, списки и т.д.) */
+main > div:nth-child(3), 
+#submission-requirements {
     display: none !important;
 }
-
