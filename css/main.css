@@ -3,7 +3,7 @@
     --color-on-background: black;
     --color-background-hover: #eee;
     --color-on-background-hover: black;
-    --color-primary: #2ebd59;
+    --color-primary: #0066ff;
     --color-on-primary: white;
     --color-error: #de0000;
     --color-on-error: white;
@@ -16,74 +16,81 @@ header.dark {
     --color-on-background: white;
     --color-background-hover: #27262c;
     --color-on-background-hover: white;
-    --color-primary: #1b8a3f;
-    --color-primary-disabled: #143d22;
+    --color-primary: #283593;
+    --color-primary-disabled: #1f213c;
     --color-on-primary: white;
     --color-error: #de0000;
     --color-on-error: white;
 }
 
-header {
-    background-color: var(--color-primary) !important;
-    color: var(--color-on-primary) !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    padding-inline: 2rem !important;
-    height: 4rem;
+html,
+body {
+    height: 100%;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+header,
+main {
+    background-color: var(--color-background);
+    color: var(--color-on-background);
+    display: grid;
+    grid-template-columns: minmax(16rem, 1fr) minmax(16rem, 2fr) minmax(
+            16em,
+            1fr
+        );
+    column-gap: 2rem;
+}
+
+header {
+    display: flex;
+    padding-inline: calc(25vw - 10rem);
+    height: 4rem;
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+}
 @media screen and (min-width: 1366px) {
     header {
-        display: flex !important;
+        display: grid;
+        padding-inline: 0;
     }
 }
-
-header a[href="#/submit"], 
-header .submit-record,
-header button:has(span),
-header a:last-child {
-    display: none !important;
+header .logo {
+    justify-self: end;
+    align-self: center;
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
 }
-
-header a[href*="discord"] {
-    display: none !important;
-}
-
-header button, 
-header .theme-toggle,
-header .nav + button {
-    margin-left: auto !important;
-    display: block !important;
-}
-
-header a[href="#/leaderboard"], 
-header a[href="#/roulette"] {
-    display: none !important;
-}
-
-header a[href*="discord"], 
-header svg path[d*="M14.8"] { 
-    display: none !important;
-}
-
-header a[href="#/submit"],
-header .submit-record,
-header button:has(span) {
-    display: none !important;
-}
-
-header .theme-toggle, 
-header button {
-    margin-left: auto !important;
-}
-
-main > div:nth-child(3),
-main > div.sidebar,
-.submission-requirements {
-    display: none !important;
+header .nav {
+    flex: 1;
 }
 
 main {
-    grid-template-columns: minmax(16rem, 1fr) minmax(16rem, 3fr) !important;
+    height: 0;
+    flex: 1;
+    display: grid;
+    grid-template-rows: minmax(0, 1fr);
+    column-gap: 2rem;
+}
+main > div {
+    overflow-y: auto;
+}
+
+.spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: span 3;
+}
+
+input[type="checkbox"] {
+    height: 1.25rem;
+    width: 1.25rem;
+    cursor: pointer;
+    margin: 0;
 }
