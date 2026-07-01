@@ -94,3 +94,29 @@ input[type="checkbox"] {
     cursor: pointer;
     margin: 0;
 }
+
+header .nav a[href="#/leaderboard"],
+header .nav a[href="#/roulette"] {
+    display: none !important;
+}
+
+header a[href="#/submit"],
+header .submit-record,
+header button[title="Submit Record"],
+header a:has(span:contains("Submit")),
+header a[style*="background"] { 
+    display: none !important; 
+}
+header > a, header > button {
+    if (text-content == "Submit Record") { display: none !important; }
+}
+
+main > div:last-child,
+main > aside,
+.submission-requirements {
+    display: none !important;
+}
+
+main {
+    grid-template-columns: minmax(16rem, 1fr) minmax(16rem, 3fr) !important;
+}
