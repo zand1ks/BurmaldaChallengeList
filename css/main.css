@@ -56,3 +56,34 @@ header .nav + button {
     margin-left: auto !important;
     display: block !important;
 }
+
+header a[href="#/leaderboard"], 
+header a[href="#/roulette"] {
+    display: none !important;
+}
+
+header a[href*="discord"], 
+header svg path[d*="M14.8"] { 
+    display: none !important;
+}
+
+header a[href="#/submit"],
+header .submit-record,
+header button:has(span) {
+    display: none !important;
+}
+
+header .theme-toggle, 
+header button {
+    margin-left: auto !important;
+}
+
+main > div:nth-child(3),
+main > div.sidebar,
+.submission-requirements {
+    display: none !important;
+}
+
+main {
+    grid-template-columns: minmax(16rem, 1fr) minmax(16rem, 3fr) !important;
+}
