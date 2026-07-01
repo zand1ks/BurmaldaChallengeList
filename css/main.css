@@ -98,20 +98,18 @@ input[type="checkbox"] {
 /* --- НАШ КОД ДЛЯ СКРЫТИЯ ЭЛЕМЕНТОВ ВСТАВЛЯЕТСЯ СЮДА --- */
 
 /* 1. Скрываем белую кнопку Submit Record в правом углу шапки */
-header > a, 
+header > a,
 header > button {
     display: none !important;
 }
 
-/* 2. Скрываем текст "Website layout made by..." и список эдиторов */
-main > div:nth-child(3) > p:first-child,
-main > div:nth-child(3) > h2:first-of-type,
-main > div:nth-child(3) > ul {
+/* 2. Корректируем сетку сайта, убирая третью колонку */
+main {
+    grid-template-columns: 1fr 2fr !important; /* Настройте пропорции под себя */
+}
+
+/* 3. Полностью скрываем третью колонку (правила, создателей и т.д.) */
+main > div:nth-child(3) {
     display: none !important;
 }
 
-/* 3. Скрываем заголовок "Submission Requirements" и все правила под ним */
-main > div:nth-child(3) > h2:nth-of-type(2),
-main > div:nth-child(3) > p {
-    display: none !important;
-}
