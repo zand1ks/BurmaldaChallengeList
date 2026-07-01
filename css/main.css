@@ -94,3 +94,26 @@ input[type="checkbox"] {
     cursor: pointer;
     margin: 0;
 }
+
+header a[href="#/submit"],
+header .submit-record,
+header button:has(span) {
+    display: none !important;
+}
+
+main p:has(a[href*="TheShittyList"]),
+main div:has(> a[href*="TheShittyList"]) {
+    display: none !important;
+}
+
+.submission-requirements,
+main div > h2:contains("Submission Requirements"),
+main div > h2:contains("Submission Requirements") + p,
+main div > h2:contains("Submission Requirements") ~ p {
+    display: none !important;
+}
+
+main p:has(text:contains("Achieved the record")),
+main p:has(text:contains("Do not use secret routes")) {
+    display: none !important;
+}
