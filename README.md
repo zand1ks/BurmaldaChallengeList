@@ -1,5 +1,6 @@
-# Welcome to the Geometry Dash Tarasivka Challenge List (TCL]
+# Welcome to the Geometry Dash Burmalda Challenge List [BCL]
 
+List Owner - zand1ks
 Discord - @undefinedpersonality
 
 ## Repo Maintainers:
